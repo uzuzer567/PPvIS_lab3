@@ -15,13 +15,13 @@ public class Table {
     private final Group group = new Group();
 
     public Table() {
-        TableColumn<TableRecord, Integer> xColumn = new TableColumn<>("x");
+        TableColumn<TableRecord, Double> xColumn = new TableColumn<>("x");
         xColumn.setCellValueFactory(new PropertyValueFactory<>("x"));
         xColumn.setPrefWidth(100);
         TableView<TableRecord> table = new TableView<>(tableData);
         table.getColumns().add(xColumn);
 
-        TableColumn<TableRecord, Integer> yColumn = new TableColumn<>("f(x)");
+        TableColumn<TableRecord, Double> yColumn = new TableColumn<>("f(x)");
         yColumn.setCellValueFactory(new PropertyValueFactory<>("y"));
         yColumn.setPrefWidth(130);
         table.getColumns().add(yColumn);
